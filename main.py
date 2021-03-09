@@ -27,7 +27,7 @@ else:
 	pygame.display.flip()
 
 	board = Grid(length, height)
-	board.remplir(floor((15/100)*(length*height)))
+	board.generate(floor((15/100)*(length*height)))
 
 	end = False
 	while not end:
