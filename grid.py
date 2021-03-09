@@ -7,7 +7,7 @@ class Grid:
 	def __init__(self, length, height):
 		self.board = [[Cell() for k in range(height)] for i in range(length)]
 		
-	def remplir(self, quota):
+	def generate(self, quota):
 		mines = []
 		while quota > 0:
 			for i in range(len(self.board)):
@@ -33,7 +33,7 @@ class Grid:
 							self.board[i][k].value = str(int(self.board[i][k].value)+1)
 	
 	def display(self, window, font):
-		couleurs = { "×": (0, 0, 0), "1": (0, 0, 255), "2": (0, 128, 0), "3": (255, 0, 0), "4": (200, 0, 200), "5": (255, 255, 0), "6": (0, 255, 255), "7": (255, 0, 0), "8": (255, 0, 0), " ": (255, 255, 255)}
+		couleurs = { "×": (0, 0, 0), "1": (0, 0, 255), "2": (0, 128, 0), "3": (255, 0, 0), "4": (200, 0, 200), "5": (255, 255, 0), "6": (0, 255, 255), "7": (106, 230, 201), "8": (106, 230, 201), " ": (255, 255, 255)}
 		cell_false = pygame.image.load("./assets/cell_false.png")
 		cell_true = pygame.image.load("./assets/cell_true.png")
 		cell_flag = pygame.image.load("./assets/cell_flag.png")
